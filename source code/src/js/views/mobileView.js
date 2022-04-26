@@ -2,6 +2,7 @@ class MobileView {
   _menuIcon = document.querySelector(".menu-icon");
   _aside = document.querySelector(".aside");
   _searchBox = document.querySelector(".header__search--field");
+  _logo = document.querySelector(".logo-name");
   addHandlerScreenWidth(handler) {
     if (screen.width < 426) {
       console.log("Mobile adjustments initiated...");
@@ -11,6 +12,7 @@ class MobileView {
   }
 
   adjustToMobile() {
+    this._logo.classList.add("hidden");
     this._menuIcon.classList.remove("hidden");
     this._aside.classList.add("transform");
     this._menuIcon.addEventListener("click", () => {
