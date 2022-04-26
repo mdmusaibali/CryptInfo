@@ -1,0 +1,19 @@
+.aside {
+  transition: all 0.5s;
+  grid-area: aside;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (max-width: 48em) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 100%;
+    z-index: 99;
+    margin-top: 10vh;
+    gap: 0;
+  }
+}

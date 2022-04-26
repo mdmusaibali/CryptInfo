@@ -1,0 +1,24 @@
+//BOOKMARKS
+.bookmarks {
+  // grid-area: bookmarks;
+  overflow-y: scroll;
+  @include glassUI;
+  border-radius: 1.5rem;
+  transition: all 0.5s;
+  height: 50%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 48em) {
+    background: none;
+    backdrop-filter: none;
+    background-color: #0d213f;
+  }
+}

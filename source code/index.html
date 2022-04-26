@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script defer type="module" src="src/js/controller.js"></script>
+    <title>CryptInfo</title>
+  </head>
+  <body>
+    <div class="container-wrapper">
+      <div class="menu-icon hidden">
+        <img class="menu-icon-img" src="src/img/menu.png" alt="" />
+      </div>
+      <!-- <div class="main-spinner">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+      </div> -->
+      <div class="container">
+        <!--------------------------------HEADER------------------------------ -->
+        <header class="header">
+          <div class="header__img">
+            <img
+              class="bitcoin-logo"
+              src="src/img/bitcoin.png"
+              alt="Bitcoin Logo"
+            />
+            <!-- <span>CryptInfo</span> -->
+          </div>
+          <form class="header__search">
+            <input
+              class="header__search--field"
+              type="text"
+              name="query"
+              id="query"
+            />
+            <button class="header__search--button">
+              <svg class="header__icon header__icon--search">
+                <use href="src/img/icons.svg#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+          <!-- <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <button class="nav__button nav__button--bookmarks">
+                  <svg class="header__icon header__icon--bookmarks">
+                    <use href="src/img/icons.svg#icon-bookmarks1"></use>
+                  </svg>
+                  <span>bookmarks</span>
+                </button>
+              </li>
+            </ul>
+          </nav> -->
+        </header>
+        <!----------------------------SEARCH RESULTS--------------------------- -->
+        <aside class="aside">
+          <div class="search-results">
+            <ul class="search-results__list">
+              <!-- <svg class="spinner">
+              <use href="src/img/icons.svg#icon-spinner7"></use>
+            </svg> -->
+
+              <!-- <li class="preview">
+              <a class="preview-link" href="#" class="preview">
+                <img class="preview-image" src="src/img/test.webp" />
+                <div class="preview-details">
+                  <h1 class="preview-symbol">BTC</h1>
+                  <h2 class="preview-name">Bitcoin</h2>
+                </div>
+                <p class="preview-price">$39004</p>
+              </a>
+            </li> -->
+              <!-- <div class="error">
+              <svg class="error-icon icon icon-warning">
+                <use href="src/img/icons.svg#icon-warning"></use>
+                <p class="error-msg">Connection Timeout!!!</p>
+              </svg>
+            </div> -->
+            </ul>
+          </div>
+          <div class="bookmarks">
+            <ul class="bookmarks__list">
+              <div class="message">
+                <svg class="message-icon icon icon-smile">
+                  <use href="src/img/icons.svg#icon-smile"></use>
+                  <p class="message-msg">
+                    Your bookmarked crypto currencies will appear here.
+                  </p>
+                </svg>
+              </div>
+              <!-- <li class="preview">
+              <a class="preview-link" href="#">
+                <img class="preview-image" src="src/img/bitcoin.png" />
+                <div class="preview-details">
+                  <h1 class="preview-symbol">BTC</h1>
+                  <h2 class="preview-name">Bitcoin</h2>
+                </div>
+                <p class="preview-price">$39004</p>
+              </a>
+            </li> -->
+            </ul>
+          </div>
+        </aside>
+        <div class="crypto-info">
+          <div class="message">
+            <svg class="message-icon icon icon-smile">
+              <use href="src/img/icons.svg#icon-smile"></use>
+              <p class="message-msg">
+                Please search or click on any cryptocurrency to begin.
+              </p>
+            </svg>
+          </div>
+          <!-- <div class="crypto-info__rank">Rank #1</div>
+          <div class="crypto-info__details">
+            <img
+              src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
+              alt=""
+            />
+            <h1 class="crypto-info__name">
+              Bitcoin (<span class="crypto-info__symbol">BTC</span>)
+            </h1>
+          </div>
+
+          <div class="crypto-info__price">
+            <div>
+              ₹31,92,902
+              <span class="crypto-info__priceChangePercentage24h color-green"
+                >2.3%</span
+              >
+            </div>
+            <button class="crypto-info__bookmark--button">
+              <svg class="icon icon-bookmark">
+                <use href="src/img/icons.svg#icon-tag-stroke"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="crypto-info__AT--statistics">
+            <div class="crypto-info__ATH--statistics">
+              <h2 class="heading-secondary color-green">
+                All Time High (ATH) Statistics
+              </h2>
+              <ul class="crypto-info__AT--items">
+                <li class="crypto-info__AT--item">
+                  All time high: <span>₹5128383</span>
+                </li>
+                <li class="crypto-info__AT--item">
+                  % change for ATH:
+                  <span class="color-red">-37.83%</span>
+                </li>
+                <li class="crypto-info__AT--item">
+                  Date for ATH: <span>November 10, 2021</span>
+                </li>
+              </ul>
+            </div>
+            <div class="crypto-info__ATL--statistics">
+              <h2 class="heading-secondary color-red">
+                All Time Low (ATL) Statistics
+              </h2>
+              <ul class="crypto-info__AT--items">
+                <li class="crypto-info__AT--item">
+                  All time low: <span>₹3993.42</span>
+                </li>
+                <li class="crypto-info__AT--item">
+                  % change for ATH:
+                  <span class="color-green">79730.91%</span>
+                </li>
+                <li class="crypto-info__AT--item">
+                  Date for ATH: <span>July 07, 2012</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="crypto-info__price--statistics">
+            <h2 class="heading-secondary marb-small">Price Statistics</h2>
+            <table>
+              <tr>
+                <td>Highest in 24h:</td>
+                <td>₹3191287</td>
+              </tr>
+              <tr>
+                <td>Lowest in 24h:</td>
+                <td>₹3117778</td>
+              </tr>
+              <tr>
+                <td>Price change in 24h:</td>
+                <td>₹72771</td>
+              </tr>
+              <tr>
+                <td>% change for price in 1h:</td>
+                <td class="color-green">0.05%</td>
+              </tr>
+              <tr>
+                <td>% change for price in 24h:</td>
+                <td class="color-green">2.33%</td>
+              </tr>
+              <tr>
+                <td>% change for price in 7d:</td>
+                <td class="color-green">4.28%</td>
+              </tr>
+              <tr>
+                <td>% change for price in 14d:</td>
+                <td class="color-red">-7.27%</td>
+              </tr>
+              <tr>
+                <td>% change for price in 30d:</td>
+                <td class="color-green">1.80%</td>
+              </tr>
+              <tr>
+                <td>% change for price in 60d:</td>
+                <td class="color-green">6.68%</td>
+              </tr>
+              <tr>
+                <td>% change for price in 200d:</td>
+                <td class="color-red">-10.63%</td>
+              </tr>
+              <tr>
+                <td>% change for price in 1y:</td>
+                <td class="color-red">-23.47%</td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="heading-secondary marb-small">
+            Market Capitalization and Supply Statistics
+          </h2>
+          <table>
+            <tr>
+              <td>Marketcap rank:</td>
+              <td>#1</td>
+            </tr>
+            <tr>
+              <td>Marketcap change in 24h:</td>
+              <td>₹1309351166719</td>
+            </tr>
+            <tr>
+              <td>% change for marketcap in 24h:</td>
+              <td class="color-green">2.20%</td>
+            </tr>
+            <tr>
+              <td>Total supply:</td>
+              <td class="color-green">21000000</td>
+            </tr>
+            <tr>
+              <td>Max supply:</td>
+              <td class="color-green">21000000</td>
+            </tr>
+          </table>
+          <h2 class="heading-secondary marb-small">Description</h2>
+          <div class="crypto-info__description">
+            Bitcoin is the first successful internet money based on peer-to-peer
+            technology; whereby no central bank or authority is involved in the
+            transaction and production of the Bitcoin currency. It was created
+            by an anonymous individual/group under the name, Satoshi Nakamoto.
+            The source code is available publicly as an open source project,
+            anybody can look at it and be part of the developmental
+            process.\r\n\r\nBitcoin is changing the way we see money as we
+            speak. The idea was to produce a means of exchange, independent of
+            any central authority, that could be transferred electronically in a
+            secure, verifiable and immutable way. It is a decentralized
+            peer-to-peer internet currency making mobile payment easy, very low
+            transaction fees, protects your identity, and it works anywhere all
+            the time with no central authority and banks.\r\n\r\nBitcoin is
+            designed to have only 21 million BTC ever created, thus making it a
+            deflationary currency. Bitcoin uses the
+            <a href="https://www.coingecko.com/en?hashing_algorithm=SHA-256"
+              >SHA-256</a
+            >
+            hashing algorithm with an average transaction confirmation time of
+            10 minutes. Miners today are mining Bitcoin using ASIC chip
+            dedicated to only mining Bitcoin, and the hash rate has shot up to
+            peta hashes.\r\n\r\nBeing the first successful online cryptography
+            currency, Bitcoin has inspired other alternative currencies such as
+            <a href="https://www.coingecko.com/en/coins/litecoin">Litecoin</a>,
+            <a href="https://www.coingecko.com/en/coins/peercoin">Peercoin</a>,
+            <a href="https://www.coingecko.com/en/coins/primecoin">Primecoin</a
+            >, and so on.\r\n\r\nThe cryptocurrency then took off with the
+            innovation of the turing-complete smart contract by
+            <a href="https://www.coingecko.com/en/coins/ethereum">Ethereum</a>
+            which led to the development of other amazing projects such as
+            <a href="https://www.coingecko.com/en/coins/eos">EOS</a>,
+            <a href="https://www.coingecko.com/en/coins/tron">Tron</a>, and even
+            crypto-collectibles such as
+            <a
+              href="https://www.coingecko.com/buzz/ethereum-still-king-dapps-cryptokitties-need-1-billion-on-eos"
+              >CryptoKitties</a
+            >.
+          </div>
+          <h2 class="heading-secondary marb-small">Social Links</h2>
+          <div class="crypto-info__social-links">
+            <ul class="crypto-info__link--items">
+              <li class="crypto-info__link--item">
+                Homepage:
+                <a href="http://www.bitcoin.org">http://www.bitcoin.org</a>
+              </li>
+              <li class="crypto-info__link--item">
+                Official Forum:
+                <a href="https://bitcointalk.org/">https://bitcointalk.org/</a>
+              </li>
+              <li class="crypto-info__link--item">
+                Subreddit:
+                <a href="https://www.reddit.com/r/Bitcoin/"
+                  >https://www.reddit.com/r/Bitcoin/</a
+                >
+              </li>
+              <li class="crypto-info__link--item">
+                GitHub Repository:
+                <a href="https://github.com/bitcoin/bitcoin"
+                  >https://github.com/bitcoin/bitcoin</a
+                >
+              </li>
+            </ul>
+          </div>
+          <p class="crypto-info__last-update">Last Updated on April 21, 2022</p> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

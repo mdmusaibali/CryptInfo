@@ -1,0 +1,180 @@
+/* From uiverse.io by @gagan-gv */
+.main-spinner {
+  height: 50px;
+  width: max-content;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: monospace;
+  letter-spacing: 1em;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-spinner span {
+  animation: loading6454 1.75s ease infinite;
+}
+
+.main-spinner span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.main-spinner span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.main-spinner span:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.main-spinner span:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.main-spinner span:nth-child(6) {
+  animation-delay: 1.25s;
+}
+
+.main-spinner span:nth-child(7) {
+  animation-delay: 1.5s;
+}
+
+@keyframes loading6454 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.spinner {
+  // margin-left: 50%;
+  margin-top: 4rem;
+  text-align: center;
+  animation: spin 1s infinite linear;
+  fill: $color-text;
+  height: 4rem;
+  width: 4rem;
+  align-self: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.transform {
+  transform: translateX(-100%);
+}
+
+.color-green {
+  color: #84cc16;
+}
+
+.color-red {
+  color: #de2a2a;
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.marb-small {
+  margin-bottom: 1rem;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #84cc16;
+}
+
+.message {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  align-self: center;
+  // max-width: 80%;
+  &-msg {
+    color: $color-text;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  &-icon {
+    fill: $color-text;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+//table
+table {
+  min-width: 42rem;
+  margin-bottom: 4rem;
+  @media (max-width: 64em) {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+td {
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem;
+  &:nth-child(2) {
+    text-align: right;
+  }
+}
+
+.icon {
+  &-bookmark {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-text;
+  }
+}
+
+.menu-icon {
+  @include glassUI;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 999;
+  border-radius: 50%;
+  border: none;
+  &-img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}

@@ -1,0 +1,112 @@
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 3rem;
+
+  //neumorphism
+  // @include neumorphism-top-left;
+  @include glassUI;
+  &__img {
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    font-size: 2.5rem;
+    color: $color-text;
+
+    span {
+      // font-family: "Times New Roman", Times, serif;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+  }
+
+  &__search {
+    padding: 0.7rem 2rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    //neumorphism
+    border-radius: 50px;
+    // box-shadow: 20px 20px 100px #292931, -20px -20px 100px #3d3d49;
+
+    &--button {
+      background-color: transparent;
+      border: none;
+      height: 100%;
+
+      cursor: pointer;
+    }
+
+    &--field {
+      border: none;
+      background-color: transparent;
+      height: 2rem;
+      color: $color-text;
+      font-size: 1.5rem;
+      width: 40rem;
+      @media (max-width: 48em) {
+        width: auto;
+      }
+      @media (max-width: 23em) {
+        width: 90%;
+      }
+    }
+    @media (max-width: 23em) {
+      width: 75%;
+    }
+  }
+  &__icon {
+    height: 2.2rem;
+    width: 2.2rem;
+
+    fill: $color-text;
+    &--bookmarks {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.nav {
+  align-self: stretch;
+  &__list {
+    list-style: none;
+    height: 100%;
+  }
+  &__item {
+    height: inherit;
+    position: relative;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    height: inherit;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    span {
+      color: $color-text;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.bitcoin-logo {
+  display: block;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+// .bookmarks:hover {
+//   border-radius: 1.5rem;
+//   overflow-x: hidden;
+//   width: 35.8rem;
+//   visibility: visible;
+//   opacity: 1;
+//   z-index: 99;
+// }

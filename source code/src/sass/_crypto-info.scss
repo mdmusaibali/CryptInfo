@@ -1,0 +1,133 @@
+.crypto-info {
+  grid-area: crypto-info;
+  // @include neumorphism-bottom-right;
+  @include glassUI;
+  padding: 4rem;
+  z-index: 1;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: flex-start;
+  color: $color-text;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  img {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+  }
+
+  // &__name {
+  //   margin-right: 2rem;
+  // }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+  }
+
+  &__bookmark--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.346);
+  }
+
+  &__rank {
+    display: inline-block;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    background-color: rgb(76, 74, 74);
+    padding: 4px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  &__priceChangePercentage24h {
+    font-size: 1.8rem;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 48em) {
+    padding: 4rem 2rem;
+  }
+}
+
+//DATA
+.crypto-info__AT--statistics {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  margin-bottom: 4rem;
+  gap: 2rem;
+
+  @media (max-width: 64em) {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.crypto-info__AT--items {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.crypto-info__AT--item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.crypto-info__price--statistics {
+  margin-bottom: 4rem;
+  @media (max-width: 64em) {
+    width: 100%;
+  }
+}
+
+.crypto-info__description {
+  font-size: 1.5rem;
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+  a {
+    text-decoration: none;
+    color: #84cc16;
+  }
+}
+.crypto-info__link--item {
+  font-size: 1.5rem;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.crypto-info__last-update {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  color: rgb(168, 167, 167);
+}

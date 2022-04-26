@@ -1,0 +1,69 @@
+// VARIABLES
+$color-background: #33333d;
+// $color-background: #e0e0e0;
+$color-text: rgb(219, 216, 216);
+// $color-text: rgb(69, 68, 68);
+
+$color-searchbar: #373743;
+// $color-searchbar: #cccbcb;
+
+$color-white: #fff;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+*:focus {
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100");
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  //aligning container center
+  margin: 0 auto;
+  margin-top: 1rem;
+  max-width: 80%;
+
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  grid-template-rows: 10vh 85vh;
+  gap: 1rem;
+  grid-template-areas:
+    "header header"
+    "aside crypto-info";
+
+  @media (max-width: 64em) {
+    max-width: 90%;
+  }
+  @media (max-width: 48em) {
+    grid-template-rows: 10vh 85vh;
+    grid-template-rows: 10vh 90vh;
+    margin: 0;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      10vh 90
+      vh;
+    grid-template-areas:
+      "header"
+      "crypto-info";
+    gap: 0;
+  }
+}

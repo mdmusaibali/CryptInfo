@@ -1,0 +1,44 @@
+@mixin neumorphism-top-left {
+  border-radius: 1.5rem;
+  background: #33333d;
+  box-shadow: 2rem 2rem 6rem #25252c, -2rem -2rem 6rem #41414e;
+
+  // border-radius: 15px;
+  // background: #e0e0e0;
+  // box-shadow: 20px 20px 60px #c7c7c7, -20px -20px 60px #f9f9f9;
+}
+@mixin neumorphism-top-right {
+  border-radius: 1.5rem;
+  background: #33333d;
+  box-shadow: -2rem 2rem 6rem #25252c, 2rem -2rem 6rem #41414e;
+
+  // border-radius: 15px;
+  // background: #e0e0e0;
+  // box-shadow: -20px 20px 60px #c7c7c7, 20px -20px 60px #f9f9f9;
+}
+@mixin neumorphism-bottom-left {
+  border-radius: 1.5rem;
+  background: #33333d;
+  box-shadow: 2rem -2rem 6rem #25252c, -2rem 2rem 6rem #41414e;
+
+  // border-radius: 15px;
+  // background: #e0e0e0;
+  // box-shadow: 20px -20px 60px #c7c7c7, -20px 20px 60px #f9f9f9;
+}
+@mixin neumorphism-bottom-right {
+  border-radius: 1.5rem;
+  background: #33333d;
+  box-shadow: -2rem -2rem 6rem #25252c, 2rem 2rem 6rem #41414e;
+
+  // border-radius: 15px;
+  // background: #e0e0e0;
+  // box-shadow: -20px -20px 60px #c7c7c7, 20px 20px 60px #f9f9f9;
+}
+
+@mixin glassUI {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
